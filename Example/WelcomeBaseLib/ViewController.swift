@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import WelcomeBaseLib
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnGoLib: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
+    @IBAction func btnGoLibAction(_ sender: Any) {
+        self.navigationController?.pushViewController(WelcomeViewController(), animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
